@@ -9,10 +9,10 @@ from api.routes import router as api_router
 
 app = FastAPI(title="Agentic Market Intelligence API")
 
-# Add CORS middleware to allow your React app (usually localhost:5173 or 3000) to talk to Python
+FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # In production, replace with your frontend URL
+    allow_origins=["FRONTEND_URL"], # In production, replace with your frontend URL
     allow_methods=["*"],
     allow_headers=["*"],
 )
