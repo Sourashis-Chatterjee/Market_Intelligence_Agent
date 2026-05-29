@@ -10,8 +10,26 @@ const PORT = process.env.PORT || 4000;
 
 connectDB();
 
+// app.use(cors({
+//     origin: ["http://localhost:5173", "http://localhost:3000"],
+//     credentials: true,
+// }));
+
+// Dynamic Production CORS Configuration
+const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    process.env.FRONTEND_URL 
+];
+
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:3000"],
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            return callback(new Error('CORS Lockout: Origin not allowed by production policy.'), false);
+        }
+        return callback(null, true);
+    },
     credentials: true,
 }));
 app.use(express.json());
