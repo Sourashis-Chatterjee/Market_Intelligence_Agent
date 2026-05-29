@@ -6,3 +6,4 @@ litellm
 python-dotenv
 langchain-google-genai
 boto3
+firecrawl-py
