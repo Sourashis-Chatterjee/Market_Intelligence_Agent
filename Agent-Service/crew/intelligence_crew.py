@@ -1,6 +1,6 @@
 # backend/crew/intelligence_crew.py
 import os
-from langchain_google_genai import ChatGoogleGenerativeAI
+#from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -46,7 +46,7 @@ class MarketIntelligenceCrew:
         # Phase 5: JSON Report Generation (Formats the final verified data)
         task_report = create_report_task(reporter, [task_strategy, task_opportunity, task_audit])
 
-        managerllm = LLM(model="llama-3.1-70b-versatile", api_key=os.getenv("GROQ_API_KEY"))
+        managerllm = LLM(model="groq/llama-3.1-70b-versatile", api_key=os.getenv("GROQ_API_KEY"))
 
         # 3. Define the Crew
         intelligence_crew = Crew(
