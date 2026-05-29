@@ -5,3 +5,4 @@ crewai-tools
 litellm
 python-dotenv
 langchain-google-genai
+boto3
