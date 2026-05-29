@@ -21,7 +21,7 @@ class MarketIntelligenceCrew:
     def __init__(self, company_name):
         self.company_name = company_name
 
-    def run(self):
+    async def run(self):
         # 1. Initialize all Agents  
         investigator = create_researcher_agent()
         strategist = create_strategist_agent()  
