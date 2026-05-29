@@ -31,7 +31,7 @@ export default function Navbar() {
       <button className="navbar-brand" onClick={() => navigate('/')} aria-label="Home">
         <span className="navbar-brand-dot" />
         <span className="navbar-brand-text">
-          <span className="navbar-brand-m">M</span>IA
+          <span className="navbar-brand-m">Market</span>IntelAI
         </span>
       </button>
 
