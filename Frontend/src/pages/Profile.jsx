@@ -8,9 +8,12 @@ export default function Profile() {
 
   const [stats, setStats] = useState({ reportsRun: '—', companiesTracked: '—' });
 
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+const AGENT_URL = import.meta.env.VITE_AGENT_URL;
+
   useEffect(() => {
     if (!token) return;
-    fetch('http://localhost:4000/api/reports/my', {
+    fetch(`${BACKEND_URL}/api/reports/my`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((r) => r.json())

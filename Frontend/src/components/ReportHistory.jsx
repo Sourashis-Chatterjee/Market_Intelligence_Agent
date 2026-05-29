@@ -1,4 +1,6 @@
-const REPORT_BASE = 'http://localhost:4000/api/reports';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+const AGENT_URL = import.meta.env.VITE_AGENT_URL;
+const REPORT_BASE = `${BACKEND_URL}/api/reports`;
 
 function timeAgo(dateStr) {
   const diff = Date.now() - new Date(dateStr).getTime();

@@ -10,8 +10,8 @@ import { useAuth } from './context/AuthContext';
 
 const FULL_TITLE = 'Market Intelligence Agent';
 
-const BACKEND_URL = import.meta.env.BACKEND_URL
-const AGENT_URL = import.meta.env.AGENT_URL;
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+const AGENT_URL = import.meta.env.VITE_AGENT_URL;
 
 function AnimatedTitle({ displayText }) {
   const words = displayText.split(' ');
