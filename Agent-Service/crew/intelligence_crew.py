@@ -60,4 +60,4 @@ class MarketIntelligenceCrew:
         )
 
         # 4. Kickoff the process
-        return intelligence_crew.kickoff(inputs={'company_name': self.company_name})
+        return await intelligence_crew.kickoff_async(inputs={'company_name': self.company_name})
