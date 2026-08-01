@@ -1,4 +1,4 @@
-# 🧠 MarketIntel AI | Autonomous Agentic Research Platform
+# MarketIntel AI | Autonomous Agentic Research Platform
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
@@ -22,11 +22,11 @@ To ensure high availability and scalability, the application is decoupled into a
 
 ## 🤖 The Sequential Multi-Agent Relay
 
-Instead of relying on a single LLM prompt, this engine uses a specialized relay of agents powered by **Groq (Llama-3.3-70B-Versatile)** for high-speed, high-fidelity reasoning.
+Instead of relying on a single LLM prompt, this engine uses a specialized relay of agents powered by **Groq (Llama-3.3-70B-Versatile)** and **Gemini-2.5-flash** for high-speed, high-fidelity reasoning.
 
 * 🔍 **The Investigator:** Bypasses marketing noise, using custom Token-Safe scrapers (Firecrawl + Serper) to extract raw technical stacks and Reddit/G2 sentiment.
 * ♟️ **The Strategist:** Identifies technical friction points and market gaps from the raw signals.
-* 🏗️ **The Architect:** Maps out concrete technical execution paths (e.g., MERN, Microservices) to solve identified friction points.
+* 🏗️ **The Architect:** Maps out concrete technical execution paths to solve identified friction points.
 * 🛡️ **The Auditor:** Stress-tests the roadmap, flagging regulatory, competitive, or technical adoption risks.
 * 📄 **The Reporter:** Synthesizes the relay into a strict, production-ready JSON schema for the UI.
 
