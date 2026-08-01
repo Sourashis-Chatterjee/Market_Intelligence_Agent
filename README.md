@@ -10,7 +10,7 @@
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 To ensure high availability and scalability, the application is decoupled into a **3-Tier Microservices Architecture**:
 
@@ -20,19 +20,19 @@ To ensure high availability and scalability, the application is decoupled into a
 
 ---
 
-## 🤖 The Sequential Multi-Agent Relay
+## The Sequential Multi-Agent Relay
 
 Instead of relying on a single LLM prompt, this engine uses a specialized relay of agents powered by **Groq (Llama-3.3-70B-Versatile)** and **Gemini-2.5-flash** for high-speed, high-fidelity reasoning.
 
-* 🔍 **The Investigator:** Bypasses marketing noise, using custom Token-Safe scrapers (Firecrawl + Serper) to extract raw technical stacks and Reddit/G2 sentiment.
-* ♟️ **The Strategist:** Identifies technical friction points and market gaps from the raw signals.
-* 🏗️ **The Architect:** Maps out concrete technical execution paths to solve identified friction points.
-* 🛡️ **The Auditor:** Stress-tests the roadmap, flagging regulatory, competitive, or technical adoption risks.
-* 📄 **The Reporter:** Synthesizes the relay into a strict, production-ready JSON schema for the UI.
+*  **The Investigator:** Bypasses marketing noise, using custom Token-Safe scrapers (Firecrawl + Serper) to extract raw technical stacks and Reddit/G2 sentiment.
+*  **The Strategist:** Identifies technical friction points and market gaps from the raw signals.
+*  **The Architect:** Maps out concrete technical execution paths to solve identified friction points.
+*  **The Auditor:** Stress-tests the roadmap, flagging regulatory, competitive, or technical adoption risks.
+*  **The Reporter:** Synthesizes the relay into a strict, production-ready JSON schema for the UI.
 
 ---
 
-## ✨ Key Technical Features
+## Key Technical Features
 
 * **Custom Token-Safe Web Scrapers:** Engineered a wrapper around Firecrawl API to hard-truncate HTML/DOM noise, dropping token consumption by 70% and bypassing strict LLM rate limits.
 * **Context Contamination Guardrails:** Agents are initialized with strict "Clean-Room" personas to prevent identity leaks and hallucinations.
@@ -41,7 +41,7 @@ Instead of relying on a single LLM prompt, this engine uses a specialized relay 
 
 ---
 
-## 📂 Monorepo Structure
+## Monorepo Structure
 
 ```text
 Market_Intelligence_Agent/
